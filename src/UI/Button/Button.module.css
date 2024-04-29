@@ -1,0 +1,53 @@
+.button {
+  display: flex;
+  gap: 6px;
+  position: relative;
+  transition: all 0.2s ease;
+  justify-content: center;
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+.button:active {
+  opacity: 0.6;
+}
+
+.spinnerContainer {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  position: relative;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+.loadingContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: inherit;
+  display: flex;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
